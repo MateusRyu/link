@@ -1,23 +1,12 @@
 @use 'default_colors';
 @use 'default_typography';
 
-$avatar-size: 150px;
-
 body {
   transition: background-color 0.3s ease;
-  background-color: #B7FFFA;  
   margin: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &.dark-mode {
-    background-color: #063532;
-
-    .box {
-      background-color: rgba($color: #5c8bb8, $alpha: .8);
-    }
-  }
 }
 
 .sr-only {
@@ -45,7 +34,6 @@ body {
 
 .box {
   transition: background-color 0.3s ease;
-  background-color: rgba($color: #00008B, $alpha: .8);
   padding: 8px;
   border-radius: 8px;
 }
@@ -67,6 +55,7 @@ body {
     background-color: #000;
   }
 }
+
 .switch {
   display: inline-block;
   width: 60px;
@@ -96,80 +85,21 @@ body {
   flex-direction: row;
 }
 
+.gap-0 {
+  gap: 0px;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
 h1 {
   font-size: 1.8rem;
   margin: 0px;
-}
-
-#avatar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  align-content: center;
-  gap: 8px;
-
-  width: 90vw;
-  margin: 8px;
-  padding: 8px;
-
-  border-radius: 16px;
-  color: white;
-
-  img {
-    border-radius: 9999px;
-    height: $avatar-size;
-    height: $avatar-size;
-  }
-
-  @media (min-width: 640px) {
-    width: 3*$avatar-size;
-  }
-
-  @media (min-width: 768px) {
-  }
-  @media (min-width: 1024px) {
-  }
-  @media (min-width: 1280px) {
-  }
-  @media (min-width: 1536px) {
-  }
-}
-
-#about {
-  display: none;
-}
-
-#linktree {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: $avatar-size;
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  width: 3*$avatar-size;
-  
-  li {
-    
-    list-style: none;
-    text-align: center;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: scale(1.1);
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-left: 10rem;
-      margin-right: 10rem;
-      color: white;
-      text-decoration: none;
-    }
-  }
 }
 
 footer {
@@ -180,4 +110,3 @@ footer {
   left: 0;
   width: 100%;
 }
-

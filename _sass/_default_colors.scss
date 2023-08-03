@@ -1,1 +1,30 @@
-$primary-color: #333333;
+@use "sass:color";
+@use "sass:list";
+$primary-colors: #E0F1F4, #b0dde3, #7ac8d1, #3cb2bc, #00a2ac, #009299, #00858b, #007679, #006669, #004a4a;
+$secondary-colors: #e0f4ed, #b7e2d2, #8ed0b6, #68bc9a, #51ad87, #439e76, #3e906b, #37805c, #2f7050, #245437;
+$highlight: #f4e3e0, #edbeab, #e09475;
+
+@function set-text-color($color) {
+    $color-brightness: lightness($color);
+    $color-saturation: saturation($color);
+    @if $color-brightness < 50 {
+        @return white;
+    } @else {
+        @return #333;
+    }
+}
+
+@mixin bg($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+
+@mixin bg-primary($variation) {
+    $color-value: list.nth($list: $primary-colors, $n: $variation);
+    @include bg($color-value);
+}
+
+@mixin bg-secondary($variation) {
+    $color-value: list.nth($list: $secondary-colors, $n: $variation);
+    @include bg($color-value);
+}

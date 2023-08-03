@@ -3,8 +3,11 @@ layout: default
 ---
 <header id="profile-card">
   <div class="box" id="avatar">
-    <div class="flex-row">
-      <h1>{{ site.author.name }}</h1>
+    <div class="flex-row gap-2">
+      <h1>
+        <span id="long-name">{{ site.author.name }}</span>
+        <span id="short-name">{{ site.author.short_name }}</span>        
+      </h1>
       {% include theme-switcher.html %}
     </div>
     <figure >
