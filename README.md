@@ -4,12 +4,12 @@ create a single page with multiple links to redirect visitors to different
 destinations, all using the power of Jekyll static site generator.
 
 ## Features
- [x] Easy to set up and customize
- [x] Supports adding unlimited links
- [x] Mobile-friendly responsive design
- [x] SEO-friendly URLs
- [x] Built with Jekyll, a fast and lightweight static site generator
- [x] Host it for free on GitHub Pages or deploy to your own hosting provider
+ - Easy to set up and customize
+ - Supports adding unlimited links
+ - Mobile-friendly responsive design
+ - SEO-friendly URLs
+ - Built with Jekyll, a fast and lightweight static site generator
+ -Host it for free on GitHub Pages or deploy to your own hosting provider
 
 ## Getting Started
 ### Prerequisites
